@@ -28,7 +28,6 @@ def send_message(request):
         user_message = data.get('message', '')
 
         # Send the message to the FastAPI chatbot service
-
         response = requests.post('http://127.0.0.1:8001/chatbot/', json={'message': user_message})
         bot_reply = response.json().get('reply', 'Sorry, I did not understand that.')
 
