@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailMadad Complaint Form</title>
+    <link rel="stylesheet" href="../../static/form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RailMadad Complaint Form</h1>
+        <form method="POST" action="{% url 'client:general_info' %}" id="complaintForm" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="pnr">PNR</label>
+            <input type="text" id="pnr" name="pnr" required pattern="[0-9]{10}">
+
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}">
+
+            <label for="complaint">Complaint</label>
+            <textarea id="complaint" name="complaint" rows="5" required></textarea>
+
+            <label for="image">Upload Image (optional)</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

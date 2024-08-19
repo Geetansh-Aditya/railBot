@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-    width: 80%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1500px;
     background-color: #333;
     border-radius: 8px;
     overflow: hidden;
@@ -37,7 +37,7 @@ header h1 {
 .complaints-list {
     padding: 20px;
     background-color: #e0e0e0;
-    height: 500px;
+    height: 700px;
     overflow-y: auto;
 }
 

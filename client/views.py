@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import json
 import requests
 from django.http import JsonResponse
+from django.core.files.storage import FileSystemStorage
 
 
 # Create your views here.
@@ -34,3 +35,11 @@ def send_message(request):
         return JsonResponse({'reply': bot_reply})
 
     return JsonResponse({'error': 'Invalid request'}, status=400)
+
+
+def general_info(request):
+    if request.method == 'POST':
+        return redirect('client:index')
+
+    return render(request, 'client/form.html')
+

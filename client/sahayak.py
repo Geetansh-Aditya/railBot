@@ -30,8 +30,10 @@ def process_message(question: str) -> str:
     output = chain.invoke({'question': question})
     return output
 
+
 class MessageRequest(BaseModel):
     message: str
+
 
 @app.post("/chatbot/")
 async def chatbot_endpoint(request: MessageRequest):

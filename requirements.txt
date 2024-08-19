@@ -7,3 +7,6 @@ python-dotenv
 langchain_community
 langserve
 channels
+transformers
+torch
+pillow
